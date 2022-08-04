@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log("Server siap!"));
 em.on("err", (msg)=>{
+    console.log(msg);
     process.exit(0);
 });
 
