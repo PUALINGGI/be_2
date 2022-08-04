@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const DB = process.env.DB_NAME;
+const DB = process.env.DB_URI;
 const OPS = { keepAlive: true, keepAliveInitialDelay: 300000 };
 const em = require("../events");
 
