@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const ENV = require("dotenv").config();
+const DB = process.env.DB_NAME;
 const OPS = { keepAlive: true, keepAliveInitialDelay: 300000 };
 const em = require("../events");
 
-mongoose.connect(ENV.parsed.DB_CONN, OPS).catch((err)=>{
+mongoose.connect(DB, OPS).catch((err)=>{
     em.emit("err", {
         code:500,
         error:"Connection error!"
